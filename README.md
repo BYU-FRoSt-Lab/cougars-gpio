@@ -5,6 +5,5 @@ Otherwise (if you're looking to set up a new Coug-UV from scratch), see this rep
 A quick high-level overview of the repo:
 - **gpio_tools/** - Python scripts for GPIO hardware control.
 We'd recommend not running these scripts directly; instead, use the bash scripts in the top-level directory.
-- **scripts (build.sh, upload.sh, etc)** - automates helpful software tasks on the AUV.
-TODO: Add here
-A description of what each script does is included as a header comment in the file.
+- **scripts**
+A description of what each bash script does is included as a header comment in the file.
