@@ -21,7 +21,7 @@ case $1 in
 
         if [ -z "$(tycmd list | grep Teensy)" ]; then
 
-            sudo python3 ~/gpio/gpio_tools/toggle_power.py
+            sudo python3 /home/frostlab/gpio/gpio_tools/toggle_power.py
         else
             echo ""
             printInfo "Teensy is already powered on"
@@ -36,7 +36,7 @@ case $1 in
             echo ""
         else
 
-            sudo python3 ~/gpio/gpio_tools/toggle_power.py
+            sudo python3 /home/frostlab/gpio/gpio_tools/toggle_power.py
         fi
         ;;
     *)
