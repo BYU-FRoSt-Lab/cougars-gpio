@@ -4,6 +4,9 @@
 # Toggles the power state of the Teensy 4.1
 # - Specify a power state using 'bash power.sh <state>'
 
+# Match with the username defined in the Dockerfile
+export UNAME=frostlab
+
 function printInfo {
   echo -e "\033[0m\033[36m[INFO] $1\033[0m"
 }
@@ -18,31 +21,21 @@ function printError {
 
 case $1 in
     "on")
-
         if [ -z "$(tycmd list | grep Teensy)" ]; then
-
-            sudo python3 /home/frostlab/gpio/gpio_tools/toggle_power.py
+            sudo python3 /home/$UNAME/gpio/gpio_tools/toggle_power.py
         else
-            echo ""
-            printInfo "Teensy is already powered on"
-            echo ""
+            printWarning "Teensy is already powered on"
         fi
         ;;
     "off")
-
         if [ -z "$(tycmd list | grep Teensy)" ]; then
-            echo ""
-            printInfo "Teensy is already powered off"
-            echo ""
+            printWarning "Teensy is already powered off"
         else
-
-            sudo python3 /home/frostlab/gpio/gpio_tools/toggle_power.py
+            sudo python3 /home/$UNAME/gpio/gpio_tools/toggle_power.py
         fi
         ;;
     *)
-        echo ""
         printWarning "No power state specified"
         printWarning "Specify a power state using 'bash power.sh <state>'"
-        echo ""
         ;;
 esac
