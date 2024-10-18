@@ -20,15 +20,15 @@ function printError {
 }
 
 case $1 in
-    "on")
-        sudo python3 /home/$UNAME/gpio/gpio_tools/strobe_on.py &
-        ;;
-    "off")
-        sudo killall python3
-        sudo python3 /home/$UNAME/gpio/gpio_tools/strobe_off.py
-        ;;
-    *)
-        printWarning "No power state specified"
-        printWarning "Specify a power state using 'bash strobe.sh <state>'"
-        ;;
+  "on")
+    sudo python3 /home/$UNAME/gpio/gpio_tools/strobe_on.py &
+    ;;
+  "off")
+    sudo killall python3
+    sudo python3 /home/$UNAME/gpio/gpio_tools/strobe_off.py
+    ;;
+  *)
+    printWarning "No power state specified"
+    printWarning "Specify a power state using 'bash strobe.sh <state>'"
+    ;;
 esac
