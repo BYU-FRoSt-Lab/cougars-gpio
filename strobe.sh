@@ -20,11 +20,11 @@ function printError {
 
 case $1 in
   "on")
-    sudo python3 ~/gpio/gpio_tools/strobe_on.py &
+    python3 ~/gpio/gpio_tools/strobe_on.py &
     ;;
   "off")
-    sudo killall python3
-    sudo python3 ~/gpio/gpio_tools/strobe_off.py
+    killall python3
+    python3 ~/gpio/gpio_tools/strobe_off.py
     ;;
   *)
     printWarning "No power state specified"
