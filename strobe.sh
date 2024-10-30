@@ -5,6 +5,7 @@
 # - Specify a power state using 'bash strobe.sh <state>'
 
 source ~/config/constants.sh
+sudo source ~/config/constants.sh
 
 function printInfo {
   echo -e "\033[0m\033[36m[INFO] $1\033[0m"
