@@ -4,8 +4,7 @@
 # Turns the strobe light on or off
 # - Specify a power state using 'bash strobe.sh <state>'
 
-# Match with the username defined in the Dockerfile
-export UNAME=frostlab
+source ~/config/constants.sh
 
 function printInfo {
   echo -e "\033[0m\033[36m[INFO] $1\033[0m"
