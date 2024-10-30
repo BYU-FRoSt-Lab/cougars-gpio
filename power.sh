@@ -21,7 +21,7 @@ function printError {
 case $1 in
     "on")
         if [ -z "$(tycmd list | grep Teensy)" ]; then
-            sudo python3 /home/$UNAME/gpio/gpio_tools/toggle_power.py
+            sudo python3 /home/$LABNAME/gpio/gpio_tools/toggle_power.py
         else
             printWarning "Teensy is already powered on"
         fi
@@ -30,7 +30,7 @@ case $1 in
         if [ -z "$(tycmd list | grep Teensy)" ]; then
             printWarning "Teensy is already powered off"
         else
-            sudo python3 /home/$UNAME/gpio/gpio_tools/toggle_power.py
+            sudo python3 /home/$LABNAME/gpio/gpio_tools/toggle_power.py
         fi
         ;;
     *)
