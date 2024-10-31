@@ -4,6 +4,4 @@
 # Quick GPIO permission fix
 # - Run this from inside the Docker container
 
-sudo groupadd gpiofix
-sudo chown :gpiofix /dev/gpiochip4
-sudo usermod -aG gpiofix $USERNAME
+sudo chmod 777 /dev/gpiochip4
