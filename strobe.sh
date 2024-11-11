@@ -5,15 +5,15 @@
 # - Specify a power state using 'bash strobe.sh <state>'
 
 function printInfo {
-  echo -e "\033[0m\033[36m[INFO] $1\033[0m"
+  echo -e "\033[0m\033[96m[INFO] $1\033[0m"
 }
 
 function printWarning {
-  echo -e "\033[0m\033[33m[WARN] $1\033[0m"
+  echo -e "\033[0m\033[93m[WARN] $1\033[0m"
 }
 
 function printError {
-  echo -e "\033[0m\033[31m[ERROR] $1\033[0m"
+  echo -e "\033[0m\033[91m[ERROR] $1\033[0m"
 }
 
 case $1 in
@@ -25,7 +25,7 @@ case $1 in
     python3 ~/gpio/gpio_tools/strobe_off.py
     ;;
   *)
-    printWarning "No power state specified"
-    printWarning "Specify a power state using 'bash strobe.sh <state>'"
+    printError "No power state specified"
+    printError "Specify a power state using 'bash strobe.sh <state>'"
     ;;
 esac
