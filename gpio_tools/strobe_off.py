@@ -10,7 +10,7 @@ import gpiod
 from gpio_def import *
 
 # open the gpio chip and set the strobe pin as output
-chip = gpiod.Chip('/dev/gpiochip4')
+chip = gpiod.Chip(CHIP)
 strobe_line = chip.get_line(STROBE_PIN)
 strobe_line.request(consumer="STROBE", type=gpiod.LINE_REQ_DIR_OUT)
 

@@ -11,3 +11,5 @@ PROGRAM_PIN = 24
 
 STROBE_PIN = 15
 STROBE_RATE = 1 # seconds
+
+CHIP = '/dev/gpiochip4'
