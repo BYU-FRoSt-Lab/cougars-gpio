@@ -3,4 +3,6 @@
 #
 # Quick GPIO permission fix
 
-sudo chmod 777 /dev/gpiochip4
+CHIP=/dev/gpiochip4
+
+sudo chmod 777 $CHIP
