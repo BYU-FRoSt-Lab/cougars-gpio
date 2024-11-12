@@ -7,7 +7,6 @@ Toggles the power to the Teensy 4.1 board
 
 import time
 import gpiod
-
 import sys
 sys.path.append('/home/frostlab/config')
 

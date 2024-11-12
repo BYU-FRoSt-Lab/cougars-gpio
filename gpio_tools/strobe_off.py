@@ -6,7 +6,6 @@ Turns off the strobe light
 '''
 
 import gpiod
-
 import sys
 sys.path.append('/home/frostlab/config')
 

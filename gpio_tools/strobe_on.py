@@ -7,7 +7,6 @@ Turns on the strobe light
 
 import time
 import gpiod
-
 import sys
 sys.path.append('/home/frostlab/config')
 
