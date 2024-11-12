@@ -3,6 +3,6 @@
 #
 # Quick GPIO permission fix
 
-CHIP=/dev/gpiochip4
+source ~/config/bash_vars.sh
 
-sudo chmod 777 $CHIP
+sudo chmod 777 $GPIO_CHIP
