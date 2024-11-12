@@ -8,6 +8,9 @@ Turns on the strobe light
 import time
 import gpiod
 
+import sys
+sys.path.append('/home/frostlab/config')
+
 from gpio_def import *
 
 # open the gpio chip and set the strobe pin as output

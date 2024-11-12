@@ -9,6 +9,9 @@ If the Teensy board is on, a red light should light up on it after running this 
 import time
 import gpiod
 
+import sys
+sys.path.append('/home/frostlab/config')
+
 from gpio_def import *
 
 # open the gpio chip and set the program pin as output

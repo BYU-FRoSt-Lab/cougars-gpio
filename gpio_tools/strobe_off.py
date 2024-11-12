@@ -7,6 +7,9 @@ Turns off the strobe light
 
 import gpiod
 
+import sys
+sys.path.append('/home/frostlab/config')
+
 from gpio_def import *
 
 # open the gpio chip and set the strobe pin as output

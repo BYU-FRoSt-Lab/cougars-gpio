@@ -8,6 +8,9 @@ Toggles the power to the Teensy 4.1 board
 import time
 import gpiod
 
+import sys
+sys.path.append('/home/frostlab/config')
+
 from gpio_def import *
 
 # open the gpio chip and set the on/off pin as output
