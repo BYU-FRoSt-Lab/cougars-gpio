@@ -12,7 +12,7 @@ import gpiod
 from gpio_def import *
 
 # open the gpio chip and set the program pin as output
-chip = gpiod.Chip(CHIP)
+chip = gpiod.Chip(GPIO_CHIP)
 prog_line = chip.get_line(PROGRAM_PIN)
 prog_line.request(consumer="PROG", type=gpiod.LINE_REQ_DIR_OUT)
 

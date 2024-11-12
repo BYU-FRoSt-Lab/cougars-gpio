@@ -11,7 +11,7 @@ import gpiod
 from gpio_def import *
 
 # open the gpio chip and set the on/off pin as output
-chip = gpiod.Chip(CHIP)
+chip = gpiod.Chip(GPIO_CHIP)
 power_line = chip.get_line(POWER_PIN)
 power_line.request(consumer="POWER", type=gpiod.LINE_REQ_DIR_OUT)
 
